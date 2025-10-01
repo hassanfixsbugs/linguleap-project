@@ -1,6 +1,6 @@
 import Flame from "./assets/Group.png";
 import card1 from "./assets/card1.png";
-import card2 from "./assets/card2.png";
+import card2 from "./assets/Card2.png";
 import card3 from "./assets/card3.png";
 const cards = [
   { name: "Articles completed", streak: 233, icon: card1 },
