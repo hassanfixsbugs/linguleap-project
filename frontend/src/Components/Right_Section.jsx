@@ -1,10 +1,39 @@
-const cards = [
-  { name: "Articles completed", streak: 233, icon: "/card1.png" },
-  { name: "Vocabulary learned", streak: 12344, icon: "/card2.png" },
-  { name: "Speaking activities", streak: 678, icon: "/card3.png" },
-];
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 export default function Right_Section() {
+  const { t, i18n } = useTranslation();
+  const user = useSelector((state) => state.auth.user);
+  const userName = user?.name || "Micheal";
+
+  // Convert numbers to Arabic/English based on language
+  const formatNumber = (num) => {
+    if (i18n.language === "ar") {
+      // Convert to Arabic-Indic numerals
+      const arabicNumerals = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
+      return String(num).replace(/\d/g, (digit) => arabicNumerals[digit]);
+    }
+    return num;
+  };
+
+  const cards = [
+    {
+      name: t("rightSection.articlesCompleted"),
+      streak: 233,
+      icon: "/card1.png",
+    },
+    {
+      name: t("rightSection.vocabularyLearned"),
+      streak: 12344,
+      icon: "/card2.png",
+    },
+    {
+      name: t("rightSection.speakingActivities"),
+      streak: 678,
+      icon: "/card3.png",
+    },
+  ];
+
   return (
     <div
       className={`
@@ -19,8 +48,7 @@ export default function Right_Section() {
           className="w-full border border-[#E6F0E7] flex flex-col items-center justify-center rounded-[16px] gap-[6px]
           h-[180px] sm:h-[180px] xl:h-[180px]
           relative overflow-hidden 
-          bg-cover bg-center /* Added back background properties */
-          "
+          bg-cover bg-center"
           style={{ backgroundImage: "url('/streak_bg.png')" }}
         >
           <div className="bg-[#E3EEE4] rounded-full h-[60px] w-[60px] sm:h-[72px] sm:w-[72px] flex items-center justify-center">
@@ -32,11 +60,11 @@ export default function Right_Section() {
           </div>
 
           <h1 className="font-['Instrument_Sans'] font-semibold text-[16px] sm:text-[20px] text-center text-black">
-            4 days in a row!
+            {t("rightSection.daysStreak", { days: formatNumber(4) })}
           </h1>
 
           <span className="font-['Inter'] font-normal text-[13px] sm:text-[16px] text-[#BBBBBB] text-center">
-            You're doing great Micheal!
+            {t("rightSection.greatJob", { name: userName })}
           </span>
         </div>
 
@@ -61,7 +89,7 @@ export default function Right_Section() {
                 {card.name}
               </span>
               <span className="font-['Instrument_Sans'] font-semibold text-[24px] sm:text-[24px]">
-                {card.streak}
+                {formatNumber(card.streak)}
               </span>
             </div>
           </div>

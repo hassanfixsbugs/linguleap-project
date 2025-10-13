@@ -1,2 +1,35 @@
 @import "tailwindcss";
 
+/* Add these styles to your existing CSS file */
+
+/* RTL Support - Automatically adjust margins and paddings */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="ltr"] {
+  direction: ltr;
+}
+
+/* Fix spacing for RTL */
+[dir="rtl"] .space-x-2 > * + * {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .space-x-4 > * + * {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+/* Ensure Arabic text renders properly */
+[lang="ar"] {
+  font-family: "Noto Sans Arabic", "Cairo", "Amiri", sans-serif;
+}
+
+/* Smooth transitions when switching languages */
+* {
+  transition:
+    margin 0.2s ease,
+    padding 0.2s ease;
+}

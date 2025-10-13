@@ -1,0 +1,98 @@
+{
+  "navbar": {
+    "welcome": "Welcome back",
+    "welcomeUser": "Welcome back, {{name}}",
+    "guest": "Guest"
+  },
+  "sidebar": {
+    "appName": "LinguLeap",
+    "home": "Home",
+    "learn": "Learn",
+    "progressTracker": "Progress Tracker",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "container": {
+    "yourTopics": "Your topics",
+    "economy": "Economy",
+    "politics": "Politics",
+    "worldNews": "World News",
+    "cultureLifestyle": "Culture and Lifestyle",
+    "securityDefense": "Security & Defense",
+    "education": "Education",
+    "culture": "Culture",
+    "travel": "Travel",
+    "media": "Media",
+    "reading": "Reading",
+    "listening": "Listening",
+    "todaysArticles": "Today's Articles",
+    "viewAll": "View all",
+    "noArticles": "No articles found. Try refreshing or check back later."
+  },
+  "articleCard": {
+    "start": "Start Assessment",
+    "continue": "Continue",
+    "minRead": "min read",
+    "min": "min",
+    "sources": {
+      "alJazeera": "Al Jazeera",
+      "linguLeap": "LinguLeap"
+    }
+  },
+  "rightSection": {
+    "daysStreak": "{{days}} days in a row!",
+    "greatJob": "You're doing great {{name}}!",
+    "articlesCompleted": "Articles completed",
+    "vocabularyLearned": "Vocabulary learned",
+    "speakingActivities": "Speaking activities"
+  },
+  "auth": {
+    "hero": {
+      "title": "Master Arabic",
+      "titleLine2": "Naturally.",
+      "subtitle": "Learn Arabic using authentic articles & news clips with AI-powered guidance."
+    },
+    "getStarted": {
+      "title": "Sign up to learn Arabic with news",
+      "subtitle": "Get access to authentic articles, audio, and guided lessons tailored to your skill level",
+      "continueEmail": "Continue with email",
+      "continueGoogle": "Continue with Google",
+      "continueApple": "Continue with Apple",
+      "continueFacebook": "Continue with Facebook",
+      "alreadyAccount": "Already have an account?",
+      "login": "Login",
+      "bySigningUp": "By signing up, you agree to LinguLeap's",
+      "terms": "Terms of Service",
+      "and": "and",
+      "privacy": "Privacy Policy"
+    },
+    "signIn": {
+      "title": "Sign in",
+      "email": "Email",
+      "emailPlaceholder": "Enter email address",
+      "password": "Password",
+      "passwordPlaceholder": "Enter password",
+      "forgotPassword": "Forgot Password?",
+      "signInButton": "Sign in",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign Up"
+    },
+    "signUp": {
+      "title": "Sign Up",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "Enter email address",
+      "password": "Password",
+      "passwordPlaceholder": "Enter password",
+      "signUpButton": "Sign up"
+    }
+  },
+  "levels": {
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "allLevels": "All Levels"
+  }
+}

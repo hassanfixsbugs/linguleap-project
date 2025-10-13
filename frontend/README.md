@@ -1,4 +1,5 @@
-# Built with React + Tailwind 
+# Built with React + Tailwind
 
 ## Preview
+
 ![App Screenshot](./screenshots/screenshot.png)
