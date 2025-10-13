@@ -1,0 +1,98 @@
+{
+  "navbar": {
+    "welcome": "مرحباً بعودتك",
+    "welcomeUser": "مرحباً بعودتك، {{name}}",
+    "guest": "ضيف"
+  },
+  "sidebar": {
+    "appName": "لينجوليب",
+    "home": "الرئيسية",
+    "learn": "تعلم",
+    "progressTracker": "متتبع التقدم",
+    "profile": "الملف الشخصي",
+    "settings": "الإعدادات",
+    "logout": "تسجيل الخروج"
+  },
+  "container": {
+    "yourTopics": "مواضيعك",
+    "economy": "الاقتصاد",
+    "politics": "السياسة",
+    "worldNews": "أخبار العالم",
+    "cultureLifestyle": "الثقافة ونمط الحياة",
+    "securityDefense": "الأمن والدفاع",
+    "education": "التعليم",
+    "culture": "الثقافة",
+    "travel": "السفر",
+    "media": "الإعلام",
+    "reading": "القراءة",
+    "listening": "الاستماع",
+    "todaysArticles": "مقالات اليوم",
+    "viewAll": "عرض الكل",
+    "noArticles": "لم يتم العثور على مقالات. حاول التحديث أو تحقق مرة أخرى لاحقاً."
+  },
+  "articleCard": {
+    "start": "بدء التقييم",
+    "continue": "استمرار",
+    "minRead": "دقيقة قراءة",
+    "min": "دقيقة",
+    "sources": {
+      "alJazeera": "الجزيرة",
+      "linguLeap": "لينجوليب"
+    }
+  },
+  "rightSection": {
+    "daysStreak": "{{days}} أيام متتالية!",
+    "greatJob": "أنت تقوم بعمل رائع {{name}}!",
+    "articlesCompleted": "المقالات المكتملة",
+    "vocabularyLearned": "المفردات المتعلمة",
+    "speakingActivities": "أنشطة التحدث"
+  },
+  "auth": {
+    "hero": {
+      "title": "أتقن العربية",
+      "titleLine2": "بشكل طبيعي.",
+      "subtitle": "تعلم العربية باستخدام مقالات أصلية ومقاطع إخبارية مع إرشادات مدعومة بالذكاء الاصطناعي."
+    },
+    "getStarted": {
+      "title": "سجل لتتعلم العربية من خلال الأخبار",
+      "subtitle": "احصل على مقالات أصلية وملفات صوتية ودروس موجهة مصممة خصيصاً لمستوى مهارتك",
+      "continueEmail": "متابعة بالبريد الإلكتروني",
+      "continueGoogle": "متابعة مع جوجل",
+      "continueApple": "متابعة مع أبل",
+      "continueFacebook": "متابعة مع فيسبوك",
+      "alreadyAccount": "هل لديك حساب بالفعل؟",
+      "login": "تسجيل الدخول",
+      "bySigningUp": "بالتسجيل، فإنك توافق على",
+      "terms": "شروط الخدمة",
+      "and": "و",
+      "privacy": "سياسة الخصوصية"
+    },
+    "signIn": {
+      "title": "تسجيل الدخول",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "أدخل عنوان البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "forgotPassword": "نسيت كلمة المرور؟",
+      "signInButton": "تسجيل الدخول",
+      "noAccount": "ليس لديك حساب؟",
+      "signUp": "سجل الآن"
+    },
+    "signUp": {
+      "title": "إنشاء حساب",
+      "name": "الاسم",
+      "namePlaceholder": "اسمك",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "أدخل عنوان البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "signUpButton": "إنشاء حساب"
+    }
+  },
+  "levels": {
+    "beginner": "مبتدئ",
+    "intermediate": "متوسط",
+    "advanced": "متقدم",
+    "allLevels": "جميع المستويات"
+  }
+}

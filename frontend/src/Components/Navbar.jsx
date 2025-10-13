@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setCredentials } from "../slices/authSlice";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar({ onMenuClick }) {
-  const [username, setUsername] = useState("");
+  const { t } = useTranslation();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const token = useSelector((state) => state.auth.token);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const token = localStorage.getItem("jwt");
     if (!token) return;
 
     const fetchMe = async () => {
@@ -12,13 +19,23 @@ export default function Navbar({ onMenuClick }) {
         const res = await fetch("http://localhost:5000/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
+
         if (!res.ok) return;
+
         const data = await res.json();
-        if (data?.username) setUsername(data.username);
-      } catch (_) {}
+        if (data?.name) {
+          setName(data.name);
+          setEmail(data.email);
+          dispatch(setCredentials({ token, user: data }));
+        }
+      } catch (err) {
+        console.error("Failed to fetch user:", err);
+        // Optional: show an error toast or message
+      }
     };
+
     fetchMe();
-  }, []);
+  }, [token, dispatch]);
 
   return (
     <div className="flex justify-between items-center w-full px-3 sm:px-6 xl:px-8 py-3 border-b border-b-[#E7E7E7] min-w-0">
@@ -45,7 +62,7 @@ export default function Navbar({ onMenuClick }) {
         </button>
 
         <h1 className="font-['Instrument_Sans'] font-semibold text-[16px] sm:text-[18px] lg:text-[22px] text-ellipsis overflow-hidden whitespace-nowrap">
-          {username ? `Welcome back, ${username} 👋🏻` : "Welcome back 👋🏻"}
+          {name ? t("navbar.welcomeUser", { name }) : t("navbar.welcome")} 👋🏻
         </h1>
       </div>
 
@@ -58,10 +75,10 @@ export default function Navbar({ onMenuClick }) {
         />
         <div className="flex flex-col gap-[1px] font-['Inter'] leading-tight">
           <span className="text-[12px] sm:text-[14px] font-medium truncate max-w-[90px] sm:max-w-none">
-            {username || "Guest"}
+            {name || t("navbar.guest")}
           </span>
           <span className="text-[10px] sm:text-[12px] text-[#5F5F5F] truncate max-w-[90px] sm:max-w-none">
-            {username ? `${username}@example.com` : "guest@example.com"}
+            {email || t("navbar.guest")}
           </span>
         </div>
       </div>

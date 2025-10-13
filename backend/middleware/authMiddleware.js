@@ -9,17 +9,12 @@ export const protect = (req, res, next) => {
 
     const token = authHeader.split(" ")[1];
     const secret = process.env.JWT_SECRET;
-    if (!secret) {
-      return res
-        .status(500)
-        .json({ error: "Server misconfiguration: JWT secret missing" });
-    }
+    if (!secret) return res.status(500).json({ error: "Server misconfiguration: JWT secret missing" });
 
     const decoded = jwt.verify(token, secret);
-    req.user = { id: decoded.userId, username: decoded.username };
+    req.user = { id: decoded.userId, name: decoded.name, email: decoded.email };
     return next();
-  } catch (error) {
-    console.error("JWT auth error:", error);
+  } catch  {
     return res.status(401).json({ error: "Not authorized" });
   }
 };
